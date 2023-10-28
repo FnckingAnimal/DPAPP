@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#c6d9f1"
+    android:orientation="vertical"
+    tools:context=".ra.Rel_Billboardsystem_Checkout_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#e6e0ec"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:text="出樻記錄"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="實驗批號:"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/et_Rel_Billboardsystem_Checkout_lotno"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:enabled="false"
+            android:textSize="15dp" />
+
+        <Button
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_scan"
+            android:onClick="onclick_bt_Rel_Billboardsystem_checkout_scan"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="开单人:"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/et_Rel_Billboardsystem_Checkout_remark"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="序號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="實驗批號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="數量"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rc_Rel_Billboardsystem_Checkout_rc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:onClick="onclick_bt_Rel_Billboardsystem_checkout_confirm"
+                android:background="@drawable/bt_submit"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:onClick="onclick_bt_Rel_Billboardsystem_checkout_cancle"
+                android:background="@drawable/bt_cancle"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

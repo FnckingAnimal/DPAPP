@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="app.dpapp.material.MaterialOutActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_out_scanmateriallotno"
+        android:layout_below="@+id/ll_selectbh"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#bec4bf"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="掃描物料批號"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="物料批號:"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/et_out_materiallotno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:layout_gravity="center_vertical"
+                ></EditText>
+
+            <Button
+                android:id="@+id/bt_outsubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_dl"
+                android:onClick="onClick_out_scan"
+                android:text="開始掃描"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="物料批號"
+                android:background="#abf6a8"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#cfcbc1"
+                android:gravity="center"
+                android:text="物料料号"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="物料名称"
+                android:background="#ececa1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="状态"
+                android:background="#e99999"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="机种"
+                android:background="#efcbc1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="编号"
+                android:background="#a5dc88"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="数量"
+                android:background="#ececa1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="typeflag"
+                android:background="#afafee"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:id="@+id/ll_out_materiallotnolist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dl"
+                android:onClick="onClick_submit_out"
+                android:text="出"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll_out_scanmateriallotno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_result3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="25dp"
+            android:text="返回信息"/>
+
+    </LinearLayout>
+</RelativeLayout>

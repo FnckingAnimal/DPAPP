@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#c6d9f1"
+    android:orientation="vertical"
+    tools:context=".ra.Rel_Billboardsystem_Checkin_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#e6e0ec"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:text="入樻記錄"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="實驗室:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/sp_Rel_Billboardsystem_Checkin_testroomno"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="樻:"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/sp_Rel_Billboardsystem_Checkin_kuino"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="機台:"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/sp_Rel_Billboardsystem_Checkin_machineno"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="數量:"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_Rel_Billboardsystem_Checkin_count"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="開單人:"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_Rel_Billboardsystem_Checkin_remark"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="實驗批號:"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_Rel_Billboardsystem_Checkin_lotno"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:enabled="false"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/bt_scan"
+                android:onClick="onclick_bt_Rel_Billboardsystem_checkin_scan"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="序號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="實驗批號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="數量"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rc_Rel_Billboardsystem_Checkin_rc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"></ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/bt_submit"
+                android:onClick="onclick_bt_Rel_Billboardsystem_checkin_confirm" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bt_cancle"
+                android:onClick="onclick_bt_Rel_Billboardsystem_checkin_cancle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

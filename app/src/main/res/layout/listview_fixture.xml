@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="#abf6a8"
+        android:gravity="center"
+        android:id="@+id/tv_area"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="#cfcbc1"
+        android:gravity="center"
+        android:id="@+id/tv_dept"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="#ececa1"
+        android:gravity="center"
+        android:id="@+id/tv_deviveno"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="#e99999"
+        android:gravity="center"
+        android:id="@+id/tv_name"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_vendor"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="#efcbc1"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:background="#a5dc88"
+        android:gravity="center"
+        android:id="@+id/tv_number"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="#ececa1"
+        android:gravity="center"
+        android:id="@+id/tv_material"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="#afafee"
+        android:gravity="center"
+        android:id="@+id/tv_userid"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:id="@+id/tv_status"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

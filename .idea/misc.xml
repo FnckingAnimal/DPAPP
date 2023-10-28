@@ -1,0 +1,109 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/drawable/bt_background.xml" value="0.38229166666666664" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/drawable/shape_album.xml" value="0.38229166666666664" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/drawable/shape_camera.xml" value="0.38229166666666664" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/activity_kanban.xml" value="0.36614583333333334" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/activity_shelf.xml" value="0.2758152173913043" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_check.xml" value="0.278125" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_checkforms.xml" value="0.33" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_checklist.xml" value="0.36614583333333334" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_checkreportdetaillist.xml" value="0.2758152173913043" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_checkreportlist.xml" value="0.32916666666666666" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/eq_checktask.xml" value="0.32916666666666666" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/item_electronic.xml" value="0.25" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/layout_bottom_dialog.xml" value="0.36614583333333334" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/listview_source2.xml" value="0.36614583333333334" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/mitemc.xml" value="0.33" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/unusual_layout.xml" value="0.36614583333333334" />
+        <entry key="..\:/rayprus-project/DPAPP/app/src/main/res/layout/web_layout.xml" value="0.2765625" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/drawable-mdpi/bt_drawline.xml" value="0.32314814814814813" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_fixture.xml" value="0.33" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_kanban.xml" value="0.14766970618034447" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_material_list2.xml" value="0.33697916666666666" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_rel_billboardsystem_checkin.xml" value="0.8238095238095238" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_rel_billboardsystem_checkout.xml" value="0.18020833333333333" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/activity_shelf.xml" value="0.27239583333333334" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/check_layout.xml" value="0.20697463768115942" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_check.xml" value="0.33" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_checkforms.xml" value="0.286231884057971" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_checklist.xml" value="0.286231884057971" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_checkreportdetaillist.xml" value="0.6351758793969849" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_checkreportlist.xml" value="0.27239583333333334" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_checktask.xml" value="0.30416666666666664" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/eq_repairexec.xml" value="0.25" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/isfc_checkin.xml" value="0.33" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/isfc_mcmaterialcall.xml" value="0.286231884057971" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_checkin.xml" value="0.25271739130434784" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_eqlist.xml" value="0.27239583333333334" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_fixture.xml" value="0.25271739130434784" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_shelf.xml" value="0.27239583333333334" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_source2.xml" value="0.33697916666666666" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/listview_source7.xml" value="0.25271739130434784" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/mitemc.xml" value="0.1" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/myspinner.xml" value="0.16388044579533942" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/output_layout.xml" value="0.14766970618034447" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/popupwindow_layout.xml" value="0.33" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/popupwindow_layout2.xml" value="0.33697916666666666" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/time_dialog.xml" value="0.16388044579533942" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/unusual_layout.xml" value="0.286231884057971" />
+        <entry key="..\:/tpp/ipadProject/Android/DPAPP/app/src/main/res/layout/zaiban_layout.xml" value="0.16388044579533942" />
+      </map>
+    </option>
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="14">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="6" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="7" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="14">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="6" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="10" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
+          <item index="13" class="java.lang.String" itemvalue="lombok.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

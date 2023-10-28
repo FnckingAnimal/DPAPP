@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".IncludingSFC.LotnoBondMachineActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="批號信息"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                >
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_deviceno"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="批号:"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/et_lotnobondmachine_lotno"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:enabled="false"
+                android:textIsSelectable="false"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_deviceno"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="機種:"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:enabled="false"
+                android:id="@+id/et_lotnobondmachine_device"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="機台信息"
+                android:gravity="center_vertical"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                >
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_deviceno"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SYSID:"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:enabled="false"
+                android:id="@+id/et_lotnobondmachine_sysid"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <Button
+                android:id="@+id/bt_lotnobondmachine_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dl"
+                android:layout_marginRight="20dp"
+                android:onClick="bt_onclick_scan"
+                android:text="掃描機台"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_lotnobondmachine_sysid"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="機台號:"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <EditText
+                android:id="@+id/et_lotnobondmachine_machineno"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textIsSelectable="false"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bec4bf"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_lotnobondmachine_checkin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_dl"
+            android:layout_marginRight="20dp"
+            android:onClick="bt_onclick_checkin"
+            android:text="進站"/>
+
+        <Button
+            android:id="@+id/bt_lotnobondmachine_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_dl"
+            android:layout_marginLeft="20dp"
+            android:onClick="bt_onclick_checkout"
+            android:text="出站"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3'
+    }
+}
+
+allprojects {
+    repositories
+            {
+                google()
+                jcenter()
+                maven { url 'https://maven.aliyun.com/repository/google' }
+            }
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "app.dpapp"
+        minSdkVersion 17
+        targetSdkVersion 30
+        versionCode 1
+        versionName "V_1.0.3.58"
+    }
+
+
+
+    defaultConfig
+            {
+                multiDexEnabled true
+            }
+    buildTypes {
+        release {
+            //在这里添加：
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'classes.dex'
+        exclude '**.**'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    productFlavors {
+    }
+    compileOptions {
+    }
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a','x86_64'
+//            universalApk true
+//        }
+//    }
+}
+
+android {
+    //useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    implementation 'com.google.android.gms:play-services-appindexing:8.1.0'
+    implementation files('libs/core.jar')
+    //compile files('libs/org.apache.httpcomponents.httpclient_4.5.2.jar')
+    //compile files('libs/httpclient-4.5.2.jar')
+    implementation files('libs/fluent-hc-4.5.2.jar')
+    //對應SDK23  tod:2016/05/28
+
+
+    //   compile 'com.android.support:appcompat-v7:23.4.0'
+    implementation 'com.android.support:appcompat-v7:23.1.1'
+    implementation 'com.android.support:design:23.1.1'
+    //對應SDK21 tod:2015/05/28
+    //compile 'com.android.support:support-v4:21.0.0'
+    //compile 'com.android.support:appcompat-v7:21.0.0'
+    //compile files('libs/android-support-v7-appcompat.jar')
+    //compile files('libs/android-support-v4.jar')
+    implementation files('libs/httpcore-4.4.4.jar')
+    implementation files('libs/httpclient-win-4.5.2.jar')
+    implementation files('libs/httpclient-cache-4.5.2.jar')
+    implementation files('libs/httpclient-4.5.2.jar')
+    implementation files('libs/foxobot-3.0.0.jar')
+    implementation files('libs/gson-2.8.0.jar')
+}

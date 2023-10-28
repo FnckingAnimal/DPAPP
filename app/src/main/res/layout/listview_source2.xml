@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/Mitemid1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#a2edaf"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Mdept1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#e8efaf"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/Mitem1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/Mnametext1"
+        android:layout_weight="2"
+        android:background="#f6c59a"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Munit"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/Mnametext1"
+        android:layout_weight="1"
+        android:background="#dba8f6"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Mspec1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/Mnametext1"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/MValuespec"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/Mnametext1"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="2"
+        android:background="#a8f8f4"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/Mvalue1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/Mnametext1"
+        android:layout_weight="2"
+        android:background="#a8f8f4"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_guige_values"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/checkvalues"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</LinearLayout><!--android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.abcdefghijklmnopqrstuvwxyz-." -->

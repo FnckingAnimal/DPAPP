@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    tools:context=".IncludingSFC.sfconline"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/isfc_online_headerrl1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#bec4bf"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/isfc_online_headerll1"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:text="WIP批选择："
+                android:gravity="center_vertical"
+                android:id="@+id/eqrepairengdatain_mainlabelheader"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="#ffffff"
+                ></TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="批号："
+            android:id="@+id/tv_lotno"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_online_headerll1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/et_lotno"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:layout_below="@+id/isfc_online_headerll1"
+            android:layout_toEndOf="@+id/tv_lotno" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="扫批号"
+            android:id="@+id/btn_scanlotno"
+            android:background="@drawable/btn_dl"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/isfc_online_headerll1"
+            android:layout_toEndOf="@+id/et_lotno"
+            android:onClick="scantbclick"/>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="执行"
+            android:id="@+id/btn_submit"
+            android:background="@drawable/btn_dl"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/isfc_online_headerll1"
+            android:layout_toEndOf="@+id/btn_scanlotno"
+            android:onClick="nfconclick"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/isfc_expendable_scanrl1"
+        android:layout_below="@+id/isfc_online_headerrl1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#bec4bf"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/isfc_online_showdata"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:text="资料显示区："
+                android:gravity="center_vertical"
+                android:id="@+id/isfc_expendable_scantv1"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="#ffffff"
+                ></TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:text="机种："
+            android:id="@+id/tv_devicenoshow"
+            android:textSize="16dp"
+            android:layout_marginTop="3pt"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/isfc_online_showdata"/>
+
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:id="@+id/tv_deviceno"
+            android:background="#ffffff"
+            android:textSize="16dp"
+            android:layout_marginTop="3pt"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/isfc_online_showdata"
+            android:layout_toEndOf="@+id/tv_devicenoshow" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="3pt"
+            android:layout_marginLeft="10pt"
+            android:id="@+id/tv_newdeviceno"
+            android:textSize="16dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/isfc_online_showdata"
+            android:layout_toEndOf="@+id/tv_deviceno" />
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:text="IP："
+            android:textAlignment="center"
+            android:id="@+id/tv_ipshow"
+            android:layout_marginTop="5pt"
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tv_devicenoshow"
+            android:layout_alignParentStart="true"
+            />
+
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:id="@+id/et_ip"
+            android:textSize="16dp"
+            android:layout_marginTop="5pt"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:layout_toEndOf="@+id/tv_ipshow"
+            android:layout_below="@+id/tv_devicenoshow"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="站位："
+            android:id="@+id/tv_opnoshow"
+            android:textSize="16dp"
+            android:layout_marginTop="5pt"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:layout_toEndOf="@+id/et_ip"
+            android:layout_below="@+id/tv_devicenoshow"
+            />
+
+        <Spinner
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:id="@+id/spi_opno"
+            android:background="#ffffff"
+            android:layout_marginTop="5pt"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/tv_opnoshow"
+            android:layout_below="@+id/tv_devicenoshow"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_lotheader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_ipshow"
+            android:visibility="invisible">
+        <TextView
+            android:id="@+id/listviewsource12Mname0"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:background="#fded6f"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:text="NUM"
+            />
+        <TextView
+            android:id="@+id/listviewsource12Mname1"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#abf6a8"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_toEndOf="@+id/listviewsource12Mname0"
+            android:text="Lotno"
+            />
+        <TextView
+            android:id="@+id/listviewsource12Mname2"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:background="#e8efaf"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_toEndOf="@+id/listviewsource12Mname1"
+            android:text="OPNO"
+            />
+        <TextView
+            android:id="@+id/listviewsource12Mname3"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:background="#a5dc88"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_toEndOf="@+id/listviewsource11Mname2"
+            android:text="Dieqty"
+            />
+        <TextView
+            android:id="@+id/listviewsource12Mname4"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:background="#cfcbc1"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_toEndOf="@+id/listviewsource12Mname3"
+            android:text="Updatedate"
+            />
+
+        <TextView
+            android:id="@+id/listviewsource12Mname5"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:background="#f7d37e"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="1dp"
+            android:textAlignment="center"
+            android:layout_toEndOf="@+id/listviewsource12Mname4"
+            android:text="State"
+            />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayout_lotheader">
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_lotlist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

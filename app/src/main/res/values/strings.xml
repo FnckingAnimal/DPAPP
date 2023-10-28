@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DPBU Smart Factory</string>
+    <string name="title_activity_e4devicenomap">e4devicenomap</string>
+    <string name="title_activity_material_in">Material_in</string>
+    <string name="title_activity_smtsap_kz">SMTSapKZ</string>
+    <string name="hello">Hello Android, AndroidpnActivity!</string>
+    <string name="settings">Settings</string>
+    <string name="url_output">http://10.143.4.218:8083/kanban/AppSFCS.aspx</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

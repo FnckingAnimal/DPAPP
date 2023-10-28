@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="序號"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="實驗批號"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="數量"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="机台号"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="入樻時間"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="入樻人"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="出樻時間"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="出樻人"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_Rel_billboardsystem_record_tv9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="狀態"
+        android:textColor="#000000"
+        android:textSize="15dp"></TextView>
+
+</LinearLayout>

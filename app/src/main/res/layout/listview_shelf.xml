@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1.0"
+        android:background="#abf6a8"
+        android:gravity="center"
+        android:id="@+id/tv_lotno"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1.0"
+        android:background="#cfcbc1"
+        android:gravity="center"
+        android:id="@+id/tv_location"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="0.8"
+        android:background="#ececa1"
+        android:gravity="center"
+        android:id="@+id/tv_userid"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1.2"
+        android:background="#e99999"
+        android:gravity="center"
+        android:id="@+id/tv_time"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

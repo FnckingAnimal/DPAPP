@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="機台號:"
+            android:gravity="center"
+            android:id="@+id/tv_output_machine"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_machineid"
+            android:textSize="16sp"
+            android:textIsSelectable="false"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="機種:"
+            android:gravity="center"
+            android:id="@+id/tv_unusual_weight"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            />
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/sp_unusual_deviceno"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="2"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tv_unusual_deviceno"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="工程師:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_engineer"
+            android:textSize="16sp"
+            android:textIsSelectable="false"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:text=""
+            android:gravity="center"
+            android:id="@+id/et_unusual_put"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="異常現象:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_put"
+            android:textSize="16sp"
+            android:textIsSelectable="false"/>
+
+        <Spinner
+            android:id="@+id/sp_unusual_appearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="2"
+            android:gravity="center" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:visibility="gone"
+            android:id="@+id/sp_unusual_appearance_type"
+            android:gravity="center"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/ll_unusual_other"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="其它異常:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_put11"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:text=""
+            android:gravity="center"
+            android:id="@+id/et_unusual_other"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_toEndOf="@+id/tv_unusual_engineer"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="請選擇類型:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_type"
+            android:textSize="16sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/sp_unusual_type"
+            android:gravity="center"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="日期"
+            android:background="@drawable/btn_dl"
+            android:gravity="center"
+
+            android:id="@+id/bt_unusual_date"
+            android:textSize="16sp"
+            android:textIsSelectable="false"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:enabled="false"
+            android:id="@+id/tv_unusual_date"
+            android:textSize="16sp"
+            android:background="#ffffff"
+            android:textIsSelectable="false"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="時間段:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_time"
+            android:textSize="16sp"
+            android:textIsSelectable="false"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:id="@+id/sp_unusual_time"
+            android:gravity="center"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="開始時間:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_start_time"
+            android:textSize="16sp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:text="點擊選擇"
+            android:gravity="center"
+            android:id="@+id/tv_unusual_starttime"
+            android:textSize="16sp"
+            android:background="#ffffff" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="結束時間:"
+            android:gravity="center"
+
+            android:id="@+id/tv_unusual_end_time"
+            android:textSize="16sp"
+            android:textIsSelectable="false" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:text="點擊選擇"
+
+            android:gravity="center"
+            android:id="@+id/tv_unusual_endtime"
+            android:textSize="16sp"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="45dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="45dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="45dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="45dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="查詢"
+            android:gravity="center"
+            android:id="@+id/bt_unusual_check"
+            android:textSize="16sp"
+            android:background="@drawable/btn_dl"
+            />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="提交"
+            android:gravity="center"
+            android:id="@+id/bt_unusual_commit"
+            android:textSize="16sp"
+            android:background="@drawable/btn_dl"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_function_below"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_output_machineid_two"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#abf6a8"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="機台號"/>
+        <TextView
+            android:id="@+id/tv_output_weight_two"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#FFCEA8F6"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="機種"
+            />
+        <!--<TextView-->
+        <!--android:id="@+id/tv_output_stye"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:background="#f7d37e"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="18sp"-->
+        <!--android:text="類型"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--/>-->
+        <TextView
+            android:id="@+id/tv_output_time_bottom"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#5067c6"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="時間段"
+            />
+        <TextView
+            android:id="@+id/tv_output_starttime"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#31d660"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="開始時間"
+            />
+        <TextView
+            android:id="@+id/tv_output_endtime"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#80d44c"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="結束時間"
+            />
+        <TextView
+            android:id="@+id/tv_output_out"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#FFC650BA"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="異常現象" />
+        <TextView
+            android:id="@+id/tv_output_pihao"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#FF50C6BA"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="工程師" />
+        <TextView
+            android:id="@+id/tv_output_creater"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#FF9FC650"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="創建人" />
+        <TextView
+            android:id="@+id/tv_output_creattime"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#FF50A3C6"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="創建時間" />
+    </LinearLayout>
+    <!--<ScrollView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="2dp"-->
+    <!--android:id="@+id/sv_unusual">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:id="@+id/ll_unusual_bottom">-->
+
+    <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_unusual">
+    </ListView>
+</LinearLayout>

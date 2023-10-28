@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_materialno"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_lgort"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_sapno"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:text="供應商批次"
+        android:id="@+id/tv_electronic2_vsbthno"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_cuerrentnum"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_nopost"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:id="@+id/tv_electronic2_date"
+        android:textColor="@color/blueviolet"
+        android:textSize="14sp" />
+</LinearLayout>

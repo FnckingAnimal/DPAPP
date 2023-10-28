@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".machinecheck.eqcheckformsave">
+
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="暫存"
+        android:gravity="center_vertical"
+        android:background="@drawable/btn_dl"
+        android:id="@+id/eq_checklistbutton2"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:onClick="savatempdata"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="刪除表單"
+        android:background="@drawable/btn_dl"
+        android:id="@+id/bt_cancle"
+        android:visibility="gone"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:onClick="cancleForm"/>
+
+
+    <TextView
+        android:id="@+id/eq_checklistopnametv1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Opname"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/eq_checklistbutton2"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/eq_checklistlinenametv1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Linename"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/eq_checklistbutton2"
+        android:layout_toEndOf="@+id/eq_checklistopnametv1"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/eq_checklistmemotv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="{0:输入Y/N}{1;170;180;:输入介于170和180的数字}{2:输入随意文字或数字}"
+        android:gravity="center_vertical"
+        android:textColor="#FF0000"
+        android:textSize="15dp"
+        android:layout_below="@+id/eq_checklistopnametv1"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/eq_checklisttv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center_vertical"
+        android:textColor="#111df5"
+        android:textSize="17dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/eq_checklistmemotv1"
+        >
+
+    </TextView>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/eq_checklisttv1">
+
+        <LinearLayout
+            android:id="@+id/eqchecklistLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--<ListView-->
+        <!--android:id="@+id/lv_checkform"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_below="@+id/eq_checklisttv1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></ListView>-->
+
+
+</RelativeLayout>

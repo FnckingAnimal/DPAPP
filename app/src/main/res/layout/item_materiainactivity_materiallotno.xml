@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="5dp"
+              android:gravity="center"
+              android:layout_height="30dp" android:layout_gravity="center">
+    <TextView
+        android:id="@+id/tv_materiallotno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/tv_materialno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#cfcbc1"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_materialname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ececa1"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_lotnostatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#e99999"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_materialdeviceno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#efcbc1"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_materialbh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#a5dc88"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_materialnum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#cfcbc1"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tv_typeflag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#afafee"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

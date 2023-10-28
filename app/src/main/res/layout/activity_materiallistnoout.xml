@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.dpapp.material.MateriallistnooutActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_materialjia1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="物料架信息"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="物料架选择："
+                android:textIsSelectable="false"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/sp_jiano1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"></LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物料架编码:"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_listno_jiano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物料架料号:"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_listno_jiapro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物料架机种:"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_listno_jiadev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仓码:"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_listno_cangma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物料架库存:"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_listno_jiakc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_materiallistno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_materialjia1"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="领料单信息"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bec4bf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="备料清单号："
+                android:textIsSelectable="false"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_stocklistno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="机种："
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_listno_listnodev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bec4bf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="发料单号："
+                android:textIsSelectable="false"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_listno_listno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="productno："
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/sp_listno_listnopro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bec4bf"
+            android:orientation="horizontal">
+
+            <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="2"
+             android:gravity="right"
+             android:text="发料总数量："
+             android:textIsSelectable="false"
+             android:textSize="14sp" />
+
+             <EditText
+                 android:id="@+id/et_listno_listnoqty"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="4"
+                 android:editable="false"
+                 android:gravity="center"
+                 android:textSize="14sp" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:gravity="right"
+                 android:text="已发数量："
+                 android:textIsSelectable="false"
+                 android:textSize="14sp" />
+
+             <EditText
+                 android:id="@+id/et_listno_sendedqty"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="4"
+                 android:editable="false"
+                 android:gravity="center"
+                 android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#bec4bf"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="应发数量："
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_listno_yfqty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="选取数量："
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_listno_selectqty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:editable="false"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_materialjialotno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_materiallistno"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="物料架库存批号信息"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#abf6a8"
+                android:gravity="center"
+                android:text="批号"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#cfcbc1"
+                android:gravity="center"
+                android:text="数量"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#a5dc88"
+                android:gravity="center"
+                android:text="时间"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#efcbc1"
+                android:gravity="center"
+                android:text="选择批号"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9bbe89"
+                android:gravity="center"
+                android:text="输入数量"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_lotnoInfo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_materialjialotno"
+        android:layout_centerHorizontal="true"
+>
+
+        <Button
+            android:id="@+id/bt_outsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_dl"
+            android:onClick="bt_onclick_outsubmit"
+            android:text="确定取出"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/bt_outquxiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/btn_dl"
+            android:onClick="bt_onclick_outquxiao"
+            android:text="取消"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

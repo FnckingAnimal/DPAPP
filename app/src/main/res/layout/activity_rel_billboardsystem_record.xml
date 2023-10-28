@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#c6d9f1"
+    android:orientation="vertical"
+    tools:context=".ra.Rel_Billboardsystem_Record_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#e6e0ec"
+            android:paddingLeft="50dp"
+            android:paddingTop="10dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:text="歷史出入樻記錄"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/rg_Rel_Billboardsystem_record_rg1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rb_Rel_Billboardsystem_record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:textSize="15dp"
+                />
+            <RadioButton
+                android:id="@+id/rb_Rel_Billboardsystem_record_dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="機種"
+                android:textSize="15dp"
+                />
+            <RadioButton
+                android:id="@+id/rb_Rel_Billboardsystem_record_lotno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="實驗批號"
+                android:textSize="15dp"
+                />
+            <RadioButton
+                android:id="@+id/rb_Rel_Billboardsystem_record_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Config"
+                android:textSize="15dp"
+                />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_Rel_Billboardsystem_record_selecttime"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间："
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/et_Rel_Billboardsystem_record_starttime"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间："
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:id="@+id/et_Rel_Billboardsystem_record_endtime"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Rel_Billboardsystem_record_selectdev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机种"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/et_Rel_Billboardsystem_record_dev"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Rel_Billboardsystem_record_selectlotno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="批号"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/et_Rel_Billboardsystem_record_lotno"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Rel_Billboardsystem_record_selectconfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="config"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:id="@+id/et_Rel_Billboardsystem_record_config"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:onClick="onclick_bt_Rel_Billboardsystem_record_search"
+                android:background="@drawable/bt_search">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="序號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="實驗批號"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="數量"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="机台号"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="入樻時間"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="入樻人"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="出樻時間"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="出樻人"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="狀態"
+                    android:textColor="#000000"
+                    android:textSize="15dp"></TextView>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/rc_Rel_Billboardsystem_record_rc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".eqcheckreportdetaillist">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:padding="5dp"
+      android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/eq_checkreportdetaillistopnametv1"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="Opname"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textSize="16sp">
+      </TextView>
+      <TextView
+          android:id="@+id/eq_checkreportdetaillistlinenametv1"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="Linename"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textSize="16sp" >
+      </TextView>
+
+      <TextView
+          android:id="@+id/tv_device"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="Deviceno"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textSize="16sp" >
+      </TextView>
+
+      <TextView
+          android:id="@+id/tv_tablename"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+          android:text="Tablename"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textSize="16sp" >
+      </TextView>
+  </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/eq_checklisttv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center_vertical"
+        android:textColor="#111df5"
+        android:textSize="16sp"
+        android:textAlignment="center" >
+    </TextView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/eqchecklistLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.dpapp"
+    android:versionName="V_1.0.0.1">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23" />
+
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES\" />
+    <!-- 检测应用程式是否已开启 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--
+        <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        -->
+    <application
+        android:name=".Staticdata"
+        android:allowBackup="true"
+        android:icon="@drawable/th_c"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- android:icon="@drawable/th_c" -->
+        <!-- tools:replace="android:icon" -->
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eqcheck"
+            android:label="点检"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"></category>
+                -->
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="cmapp.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            >
+        </activity>
+        <activity
+            android:name=".eqchecklist"
+            android:label="点检细项输入"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eq.checklist" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BarCodeTestActivity"
+            android:label="扫描"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="barcodescan" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="扫描"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="captureactivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LogoActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="cm.logo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".oitemcj"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="oitemc" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mitemcj"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="mitemc" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".lottrace"
+            android:label="批号追溯"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="lottrace" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".lottraceopdata"
+            android:label="批号站位信息"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="lottraceopdata" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eqbasedata"
+            android:label="机台基础信息"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqbasedata" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eqcheckreportlist"
+            android:label="報表查詢-點檢"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqcheckreportlist" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eqcheckreportdetaillist"
+            android:label="報表查詢-點檢"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqcheckreportdetaillist" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Repair.eqrepairexec"
+            android:label="設備報修"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqrepairexec" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Repair.eqrepairengdatain"
+            android:label="工程信息錄入"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqrepairexec" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Reserve.ritemmapj"
+            android:label="備品管理"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="reservemgr" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Reserve.rsstrocklist"
+            android:label="儲位庫存出入庫管理"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="rsservestrockmgr" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Reserve.rsstrockexeci"
+            android:label="入庫作業"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="rsservestrockin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Reserve.rsstrockexeco"
+            android:label="出庫作業"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="rsservestrockout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".machinecheck.eqchecktask"
+            android:label="點檢任務列表"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="meqchecktask" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Repair.eqrepairtask"
+            android:label="報修任務列表"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqrepiartask" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Reserve.rsstrocktask"
+            android:label="工程叫料任務列表"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="rsstrocktask" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".systest"
+            android:label="系統測試"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="systest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Repair.eqrepiaraccept"
+            android:label="驗收項目作業"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="eqrepiaraccept" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mgrbc.mgrbceqcheck"
+            android:label="資產盤點"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="mgrbceqcheck" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".appcdl.uploadimage"
+            android:label="上傳圖片"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="daluploadimaage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+        android:name=".OtherForm.jcwaferiqcinspectionreport"
+        android:label="WaferIQC檢驗Report"
+        android:windowSoftInputMode="stateHidden">
+        <intent-filter>
+            <action android:name="jcwaferiqcinspectionreport" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+        <activity
+            android:name=".IncludingSFC.mcmaterialcall"
+            android:label="物料管控叫料"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="mcmaterialcall" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".IncludingSFC.geterpissueorder"
+            android:label="發料單清單"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="geterpissueorder" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".IncludingSFC.geterpissueorderdetail"
+            android:label="發料單"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="geterpissueorderdetail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".IncludingSFC.expendable"
+            android:label="請選擇所需耗材信息"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="expendable" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".appcdl.MessageBoxexec"
+            android:label=""
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MesaageBoxexec" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PublicLoading"
+            android:label=""
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="publicloading" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".nfcitemj"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name=".nfcitem" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".devicenomap"
+            android:label=""
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="devicenomap" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".sfconline"
+            android:label=""
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="sfconline" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".Service.Scanimage"
+            android:enabled="true"
+            android:exported="true"
+            android:process="system"
+            ></service>
+        <!--android:process="system"-->
+        <receiver android:name=".Service.NetworkConnectChangedReceiver"
+            android:process="system"
+            >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".Service.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED">
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+</manifest>

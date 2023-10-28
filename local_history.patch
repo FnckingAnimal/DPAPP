@@ -1,0 +1,162 @@
+Index: app/src/main/java/app/dpapp/eqchecklist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/app/dpapp/eqchecklist.java b/app/src/main/java/app/dpapp/eqchecklist.java
+--- a/app/src/main/java/app/dpapp/eqchecklist.java	(date 1661914540109)
++++ b/app/src/main/java/app/dpapp/eqchecklist.java	(date 1661914540109)
+@@ -715,56 +715,9 @@
+                         switch (strArray[0]) {
+                             case "1":
+                                 //by lyh
+-                                if (strArray[1].equals(">") || strArray[1].equals("<") || strArray[1].equals(">=") || strArray[1].equals("<=")
+-                                 || strArray[1].equals("≥") || strArray[1].equals("≤")) {
++                                if (strArray[1].equals(">") || strArray[1].equals("<")) {
+                                     if (strArray[1].equals(">")) {
+-                                        if (Float.parseFloat(temp2) > Float.parseFloat(strArray[2])) {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                        } else {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                            if (clicktimes < 2) {
+-                                                checkdatastatus = false;
+-                                            }
+-                                        }
+-                                    }
+-                                    if (strArray[1].equals("<")) {
+-
+-                                        if (Float.parseFloat(temp2) < Float.parseFloat(temp2)) {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                            if (clicktimes < 2) {
+-                                                checkdatastatus = false;
+-                                            }
+-
+-                                        } else {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                        }
+-                                    }
+-                                    if (strArray[1].equals("<=")) {
+-
+-                                        if (Float.parseFloat(strArray[2]) <= Float.parseFloat(temp2)) {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                            if (clicktimes < 2) {
+-                                                checkdatastatus = false;
+-                                            }
+-
+-                                        } else {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                        }
+-                                    }
+-                                    if (strArray[1].equals(">=")) {
+-                                        if (Float.parseFloat(strArray[2]) >= Float.parseFloat(temp2)) {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                            if (clicktimes < 2) {
+-                                                checkdatastatus = false;
+-                                            }
+-
+-                                        } else {
+-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                        }
+-                                    }
+-                                    if (strArray[1].equals("≤")) {
+-
+-                                        if (Float.parseFloat(strArray[2]) <= Float.parseFloat(temp2)) {
++                                        if (Float.parseFloat(strArray[2]) > Float.parseFloat(temp2)) {
+                                             ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                             if (clicktimes < 2) {
+                                                 checkdatastatus = false;
+@@ -774,8 +727,9 @@
+                                             ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                         }
+                                     }
+-                                    if (strArray[1].equals("≥")) {
+-                                        if (Float.parseFloat(strArray[2]) >= Float.parseFloat(temp2)) {
++                                    if (strArray[1].equals("<")) {
++
++                                        if (Float.parseFloat(strArray[2]) < Float.parseFloat(temp2)) {
+                                             ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                             if (clicktimes < 2) {
+                                                 checkdatastatus = false;
+@@ -867,36 +821,13 @@
+                                 if (strArray.length == 1 || temp2.trim().equals("/")) {
+                                     ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                 } else {
+-                                    if (strArray[1].equals(">") || strArray[1].equals("<") || strArray[1].equals(">=") || strArray[1].equals("<=")
+-                                            || strArray[1].equals("≥") || strArray[1].equals("≤")) {
++                                    if (strArray[1].equals(">") || strArray[1].equals("<")) {
+                                         if (strArray[1].equals(">")) {
+                                             if (Float.parseFloat(strArray[2]) > Float.parseFloat(temp2)) {
+                                                 ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                                 if (clicktimes < 2) {
+                                                     checkdatastatus = false;
+                                                 }
+-
+-                                            } else {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                            }
+-                                        }
+-                                        if (strArray[1].equals(">=")) {
+-                                            if (Float.parseFloat(strArray[2]) >= Float.parseFloat(temp2)) {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                                if (clicktimes < 2) {
+-                                                    checkdatastatus = false;
+-                                                }
+-
+-                                            } else {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                            }
+-                                        }
+-                                        if (strArray[1].equals("≥")) {
+-                                            if (Float.parseFloat(strArray[2]) >= Float.parseFloat(temp2)) {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                                if (clicktimes < 2) {
+-                                                    checkdatastatus = false;
+-                                                }
+ 
+                                             } else {
+                                                 ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+@@ -910,30 +841,6 @@
+                                                     checkdatastatus = false;
+                                                 }
+ 
+-                                            } else {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                            }
+-                                        }
+-                                        if (strArray[1].equals("<=")) {
+-
+-                                            if (Float.parseFloat(strArray[2]) <= Float.parseFloat(temp2)) {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                                if (clicktimes < 2) {
+-                                                    checkdatastatus = false;
+-                                                }
+-
+-                                            } else {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+-                                            }
+-                                        }
+-                                        if (strArray[1].equals("≤")) {
+-
+-                                            if (Float.parseFloat(strArray[2]) <= Float.parseFloat(temp2)) {
+-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+-                                                if (clicktimes < 2) {
+-                                                    checkdatastatus = false;
+-                                                }
+-
+                                             } else {
+                                                 ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                             }
+@@ -1007,11 +914,10 @@
+                         return;
+                     }
+                 }
+-
+                 if(list.size() > 1) {
++//                    long count = list.stream().distinct().count();
+                     Set<String> set = new HashSet<>(list);
+-                    long count = set.size();
+-                    if(count < list.size()) {
++                    if(set.size() < list.size()) {
+                         Toast.makeText(eqchecklist.this, "OP ID，ME ID，QC ID，ME Check人不能相同!", Toast.LENGTH_LONG).show();
+                         return;
+                     }

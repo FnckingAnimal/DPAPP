@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="ifContentScrolls">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/mitemll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_checkmaintain"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="點檢保養"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_wi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="linkeqcheckforms" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_wi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqcheckforms"
+                        android:text="多表單点检"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemc_button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib7"
+                        android:gravity="center"
+                        android:onClick="linkeqcheckrepory" />
+
+                    <TextView
+                        android:id="@+id/mitemc_tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqcheckrepory"
+                        android:text="點檢查詢"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemc_button6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib10"
+                        android:gravity="center"
+                        android:onClick="linkeqchecktask" />
+
+                    <TextView
+                        android:id="@+id/mitemc_tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqchecktask"
+                        android:text="任務列表"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemc_button14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="eqcheckoffline" />
+
+                    <TextView
+                        android:id="@+id/mitemc_tv14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="eqcheckoffline"
+                        android:text="機台離線"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemc_button15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib2"
+                        android:gravity="center"
+                        android:onClick="onclick" />
+
+                    <TextView
+                        android:id="@+id/mitemc_tv15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onclick"
+                        android:text="點檢保養"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_mp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib9"
+                        android:gravity="center"
+                        android:onClick="mponclick" />
+
+                    <TextView
+                        android:id="@+id/tv_mp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="mponclick"
+                        android:text="MP表单"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_electronic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib11"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:onClick="electronicOnClick" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="electronicOnClick"
+                        android:text="電子管製卡"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/mitemc_button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="mfglinkeqcheck"
+                        android:text="点检作業" />
+
+                    <TextView
+                        android:id="@+id/mitemc_tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="mfglinkeqcheck"
+                        android:text="機台点检"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_pm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/btn_ib2"
+                        android:gravity="center"
+                        android:onClick="mfglinkeqpm"
+                        android:text="保養作業" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_pm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="mfglinkeqpm"
+                        android:text="機台保養"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/mitemcbutton_pmsearch"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/mitemc_tv5"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/mitemcbutton_pm"
+                    android:background="@drawable/btn_ib3"
+                    android:onClick="linkeqpmrepory"
+                    android:text="设备信息"
+                    android:textSize="35dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mitemc_pmsearch"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/mitemcbutton_pmsearch"
+                    android:layout_marginStart="15dp"
+                    android:layout_toRightOf="@+id/mitemctv_pm"
+                    android:onClick="linkeqpmrepory"
+                    android:text="保養查詢"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/mitemcbutton_pmtask"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/mitemc_tv6"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/mitemcbutton_pmsearch"
+                    android:background="@drawable/btn_ib8"
+                    android:onClick="linkeqpmtask"
+                    android:text="设备信息"
+                    android:textSize="35dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mitemc_pmtask"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/mitemcbutton_pmtask"
+                    android:layout_marginStart="15dp"
+                    android:layout_toRightOf="@+id/mitemc_pmsearch"
+                    android:onClick="linkeqpmtask"
+                    android:text="保養任務"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/mitemll4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll1"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_machine"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="機臺報修"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_eqrepair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib5"
+                        android:gravity="center"
+                        android:onClick="linkeqrepair" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_eqrepair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqrepair"
+                        android:text="報修作業"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_eqrepairtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib11"
+                        android:gravity="center"
+                        android:onClick="linkeqrepairtask" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_eqrepairtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqrepairtask"
+                        android:text="報修列表"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_eqrepairengdatain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib11"
+                        android:gravity="center"
+                        android:onClick="linkeqrepairengdatain" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_eqrepairengdatain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="linkeqrepairengdatain"
+                        android:text="報修列表"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mitemll2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll4"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sfc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="SFC相關"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_lot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib8"
+                        android:gravity="center"
+                        android:onClick="lottrace_click" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_lot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="lottrace_click"
+                        android:text="批号追溯"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_calloff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib3"
+                        android:gravity="center"
+                        android:onClick="calloffmaterial_click" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_material"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="calloffmaterial_click"
+                        android:text="MFG叫料"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_erp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib2"
+                        android:gravity="center"
+                        android:onClick="erpissueorder_click" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_erp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="erpissueorder_click"
+                        android:text="发料查询"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_iqc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="waferiqcreport_click"
+                        android:text="IQC报告" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_iqc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="waferiqcreport_click"
+                        android:text="IQC報告"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_lhsfconine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib13"
+                        android:gravity="center"
+                        android:onClick="lhsfconlineclick" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_lhsfconine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="lhsfconlineclick"
+                        android:text="SFCOnline"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_new_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib9"
+                        android:gravity="center"
+                        android:onClick="new_function" />
+
+                    <TextView
+                        android:id="@+id/tv_new_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="new_function"
+                        android:text="烤箱聯網"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_output"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib12"
+                        android:gravity="center"
+                        android:onClick="output" />
+
+                    <TextView
+                        android:id="@+id/tv_output"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="output"
+                        android:text="看板"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_unusual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib3"
+                        android:gravity="center"
+                        android:onClick="unusual" />
+
+                    <TextView
+                        android:id="@+id/tv_unusual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="unusual"
+                        android:text="Unusual"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_output2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib9"
+                        android:gravity="center"
+                        android:onClick="output2" />
+
+                    <TextView
+                        android:id="@+id/tv_output2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="output2"
+                        android:text="Output"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_rel_zaiban"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_zaiban_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="zaiban_onclick" />
+
+                    <TextView
+                        android:id="@+id/tv_zaiban_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="zaiban_onclick"
+                        android:text="記錄載板"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_lotnobondmachine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib7"
+                        android:gravity="center"
+                        android:onClick="lotnobondmachine_click" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_lotnobondmachine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="lotnobondmachine_click"
+                        android:text="機台綁定機台"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib2"
+                        android:gravity="center"
+                        android:onClick="machineshelf_click" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="machineshelf_click"
+                        android:text="置物架"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mitemll3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll2"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_spares"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="備品管理"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="9"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_stocklocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib9"
+                        android:gravity="center"
+                        android:onClick="reservestrock_click"
+                        android:text="点检" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_stocklocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="reservestrock_click"
+                        android:text="儲位管理"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_stockengtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib12"
+                        android:gravity="center"
+                        android:onClick="reserveengtask_click" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_stockengtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="reserveengtask_click"
+                        android:text="叫料列表"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_output_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="output_click" />
+
+                    <TextView
+                        android:id="@+id/tv_output_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="output_click"
+                        android:text="產出查詢"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mitemll5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll3"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_asset"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="資產管理"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:weightSum="9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_eqbinddata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib6"
+                        android:gravity="center"
+                        android:onClick="bindeqbasedata" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_eqbinddata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="bindeqbasedata"
+                        android:text="设备信息"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_mgrbceqcheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib13"
+                        android:gravity="center"
+                        android:onClick="onmgrbceqcheckclick" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_mgrbceqcheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onmgrbceqcheckclick"
+                        android:text="設備盤點"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_mgrbceqcheck_pys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib5"
+                        android:gravity="center"
+                        android:onClick="onPhyClick" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_mgrbceqcheck_pys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onPhyClick"
+                        android:text="PYS評優"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib7"
+                        android:gravity="center"
+                        android:onClick="onTest" />
+
+                    <TextView
+                        android:id="@+id/tv_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onTest"
+                        android:text="训练核查"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mitemll6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll5"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wuliaojia"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="SMT相关"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="9"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_SMTRK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib6"
+                        android:gravity="center"
+                        android:onClick="onClickSMTRK" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_SMTRK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickSMTRK"
+                        android:text="批号入库"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_SMTCK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib5"
+                        android:gravity="center"
+                        android:onClick="onClickSMTCK" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_SMTCK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickSMTCK"
+                        android:text="批号出库"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_smtsapkz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib10"
+                        android:gravity="center"
+                        android:onClick="onClicksmtsapkz" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_smtsapkz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClicksmtsapkz"
+                        android:text="SAP扣账"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_materilotnoquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib7"
+                        android:gravity="center"
+                        android:onClick="onClickMaterialLotnoSearch" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_materilotnoinquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickMaterialLotnoSearch"
+                        android:text="庫存查詢"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_typeselect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib3"
+                        android:gravity="center"
+                        android:onClick="onClickTypSelect" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_typeselect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickTypSelect"
+                        android:text="物料出入系统"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_materilquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib7"
+                        android:gravity="center"
+                        android:onClick="onClickMaterialSearch" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_materialquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickMaterialSearch"
+                        android:text="物料查詢"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mitemll7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll6"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_smtinfo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="EOL相关"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="9"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mitemcbutton_EOL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib2"
+                        android:gravity="center"
+                        android:onClick="onClickEOLStagingTimeWIP" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_EOLStagingTimeWIP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickEOLStagingTimeWIP"
+                        android:text="Staging Time WIP"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/ib_qcfixture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib11"
+                        android:gravity="center"
+                        android:onClick="onClickFixture" />
+
+                    <TextView
+                        android:id="@+id/tv_fixture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClickFixture"
+                        android:text="治具掃描"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mitemll8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mitemll7"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_Rel_billboardsystem_menu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#bdbeb7"
+                android:gravity="center_vertical"
+                android:text="RA相关"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="9"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mRel_billboardsystem_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_ib1"
+                        android:gravity="center"
+                        android:onClick="onClick_Rel_billboardsystem_menu" />
+
+                    <TextView
+                        android:id="@+id/mitemctv_Rel_billboardsystem_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="onClick_Rel_billboardsystem_menu"
+                        android:text="Rel_SystemCheck"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

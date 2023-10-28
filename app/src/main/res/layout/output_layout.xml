@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bec4bf"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_output_machine"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="機台號:"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_output_machineid"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_output_weight"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="機種:"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/sp_output_deviceno"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_output_deviceno"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_output_type"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="類型:"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/sp_output_type"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/bt_output_date"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dl"
+            android:gravity="center"
+            android:text="選擇日期"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_output_date"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_output_time"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="時間段:"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/sp_output_time"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_output_put"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="時段產出:"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_output_put"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:background="@drawable/bt_drawline"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/bt_output_check"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dl"
+            android:gravity="center"
+            android:text="查詢"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:id="@+id/bt__output_commit"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_dl"
+            android:gravity="center"
+            android:text="提交"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_output_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#5067c6"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_output_scan"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="批號錄入區:可點(掃描批號條碼)"
+            android:textColor="#FF760606"
+            android:textIsSelectable="false"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_output_manual"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="切換手動輸入"
+            android:textIsSelectable="false"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_output_lotno1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt_drawline"
+            android:gravity="center"
+            android:text=""
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_output_lotno2"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bt_drawline"
+            android:gravity="center"
+            android:text=""
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_output_lotno3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bt_drawline"
+            android:gravity="center"
+            android:text=""
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_output_lotno4"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bt_drawline"
+            android:gravity="center"
+            android:text=""
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <LinearLayout
+        android:id="@+id/ll_function_below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_output_machineid_two"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#abf6a8"
+            android:gravity="center"
+            android:text="機台號"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_weight_two"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FFCEA8F6"
+            android:gravity="center"
+            android:text="機種"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_stye"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#f7d37e"
+            android:gravity="center"
+            android:text="類型"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_time_bottom"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#5067c6"
+            android:gravity="center"
+            android:text="時間段"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_out"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FFC650BA"
+            android:gravity="center"
+            android:text="累加產出"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_pihao"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FF50C6BA"
+            android:gravity="center"
+            android:text="批號"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_creater"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FF9FC650"
+            android:gravity="center"
+            android:text="創建人"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_output_creattime"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#FF50A3C6"
+            android:gravity="center"
+            android:text="創建時間"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

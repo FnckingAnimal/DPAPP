@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="日期:"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:id="@+id/pys_tv_date"
+        android:textSize="20sp"
+        android:textIsSelectable="false"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:id="@+id/pys_tv_date_t"
+        android:textSize="20sp"
+        android:textIsSelectable="false"
+        android:layout_alignParentStart="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="工號:"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:id="@+id/pys_tv_number"
+        android:textSize="20sp"
+        android:textIsSelectable="false"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:id="@+id/pys_et_number"
+        android:textSize="20sp"
+        android:textIsSelectable="false"
+        android:background="#ffffff" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:id="@+id/pys_tv_commit"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:text="確認"
+            android:textSize="20sp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="姓名:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_name"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_name_t"
+            android:textSize="20sp"
+            android:textColor="#FF151414"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="班別:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_class"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#FF151414"
+            android:id="@+id/pys_tv_class_t"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="站位:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_zhan"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#FF151414"
+            android:id="@+id/pys_tv_zhan_t"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="項目:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_item"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:id="@+id/pys_sp_item"
+            android:textIsSelectable="false"
+            android:layout_alignParentTop="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="分數:"
+            android:numeric="integer"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_grades"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:id="@+id/pys_sp_grade"
+            android:textIsSelectable="false"
+            android:layout_alignParentTop="true"/>
+
+        <!--<EditText-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:id="@+id/pys_et_grades"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textIsSelectable="false"-->
+            <!--android:background="#ffffff" />-->
+        <!--<TextView-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:id="@+id/pys_tv_weight"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="16sp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="50dp" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="備註:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/pys_tv_notes"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:id="@+id/pys_et_notes"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="提交"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/bt_pys_commit"
+        android:textSize="20dp"
+        android:background="@drawable/btn_dl"
+        android:textIsSelectable="false">
+    </Button>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pys_lv">
+    </ListView>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.dpapp.material.SMTSapKZ">
+
+    <LinearLayout
+        android:id="@+id/ll_wonoinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="信息输入"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工单号:"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/et_wono"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_cs"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_dl"
+                android:onClick="bt_onclick_cs"
+                android:text="重输"
+                android:textAlignment="center"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_dl"
+                android:onClick="bt_onclick_qd"
+                android:text="确定"
+                android:textAlignment="center"
+                android:textSize="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wonoinfo"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/ll_wonoinput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="入库单显示"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_showinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#abf6a8"
+                android:gravity="center"
+                android:text="wono"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#e8efaf"
+                android:gravity="center"
+                android:text="listno"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#cfcbc1"
+                android:gravity="center"
+                android:text="清单号"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#9bbe89"
+                android:gravity="center"
+                android:text="lotno"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#b5be89"
+                android:gravity="center"
+                android:text="productno"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#a5dc88"
+                android:gravity="center"
+                android:text="数量"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#cfcbc1"
+                android:gravity="center"
+                android:text="cartno"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#abf6a8"
+                android:gravity="center"
+                android:text="type"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="#e8efaf"
+                android:gravity="center"
+                android:text="时间"
+                android:textColor="#000000"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_listno"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_kz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_wonoinfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_dl"
+        android:onClick="bt_onclick_kz"
+        android:text="SAP扣账"
+        android:textAlignment="center"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_returninfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_kz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#bec4bf"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:gravity="center_vertical"
+            android:text="返回信息"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+        <TextView
+            android:id="@+id/tv_result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="返回信息"
+            android:textColor="#FF0000"
+            android:textSize="30dp"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>

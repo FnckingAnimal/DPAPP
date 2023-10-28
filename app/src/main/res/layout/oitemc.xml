@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="设备代码："
+        android:gravity="center_vertical"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:id="@+id/eqcodetextView"
+        android:text="XXXXXXXX"
+        android:layout_toEndOf="@+id/textView" >
+    </TextView>
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="点检"
+        android:background="@drawable/btn_ib1"
+        android:id="@+id/button3"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textView"
+        android:onClick="linkeqcheck"
+        android:textSize="35dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/oitemtv3"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text="点检"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/button3"
+        >
+
+    </TextView>
+
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="保养"
+        android:background="@drawable/btn_ib2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/oitem2button"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/button3"
+        android:textSize="35dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:id="@+id/oitemtv4"
+        android:text="保养"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/oitemtv3"
+        android:layout_below="@+id/oitem2button"
+        >
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="报修"
+        android:background="@drawable/btn_ib5"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/oitemcbutton3"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/oitem2button"
+        android:textSize="35dp"
+        android:onClick="linkeqrepair"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/oitemtv5"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text="报修"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/oitemtv4"
+        android:layout_below="@+id/oitem2button"
+        >
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="设备信息"
+        android:background="@drawable/btn_ib6"
+        android:layout_marginTop="5dp"
+        android:id="@+id/oitemcbutton4"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/oitemcbutton3"
+        android:onClick="linkeqdata"
+        android:layout_marginLeft="15dp"
+        android:textSize="35dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/oitemtv6"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text="设备信息"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/oitemcbutton4"
+        android:layout_toRightOf="@+id/oitemcbutton3"
+        android:layout_marginLeft="15dp"
+        >
+
+    </TextView>
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="设备信息"
+        android:background="@drawable/btn_ib7"
+        android:layout_marginTop="5dp"
+        android:id="@+id/oitemcbutton5"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/oitemcbutton4"
+        android:onClick="linkeqcheckrepory"
+        android:layout_marginLeft="15dp"
+        android:textSize="35dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/oitemtv7"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text="點檢查詢"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/oitemcbutton5"
+        android:layout_toRightOf="@+id/oitemtv6"
+        android:layout_marginLeft="15dp"
+        >
+    </TextView>
+
+</RelativeLayout>

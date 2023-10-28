@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".IncludingSFC.geterpissueorder">
+
+    <RelativeLayout
+        android:id="@+id/isfc_geterpissueorderlist_hrl"
+        android:layout_width="fill_parent"
+        android:layout_height="850dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:background="#bec4bf"
+        >
+
+        <LinearLayout
+            android:id="@+id/isfc_geterpissueorderlist_hll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#5067c6"
+            android:onClick="isfc_geterpissueorderlist_scanclick"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:id="@+id/isfc_geterpissueorderlist_htv1"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:text="發料單清單："
+                android:textColor="#ffffff"
+                android:textIsSelectable="false"
+                android:textSize="20dp"
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/isfc_geterpissueorderlist_hll2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isfc_geterpissueorderlist_hll1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/isfc_geterpissueorderlist_dhtv1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="#12CdFf"
+                android:gravity="center_vertical"
+                android:text="LotNo"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/isfc_geterpissueorderlist_dhtv2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/isfc_geterpissueorderlist_dhtv1"
+                android:layout_weight="1"
+                android:background="#a2edaf"
+                android:gravity="center_vertical"
+                android:text="IssueNo"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/isfc_geterpissueorderlist_dhtv3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/isfc_geterpissueorderlist_dhtv2"
+                android:layout_weight="1"
+                android:background="#e8efaf"
+                android:gravity="center_vertical"
+                android:text="WoNo"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/isfc_geterpissueorderlist_dhtv4"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/isfc_geterpissueorderlist_dhtv3"
+                android:layout_weight="1"
+                android:background="#e8efaf"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/isfc_geterpissueorderlist_dss1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isfc_geterpissueorderlist_hll2"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:id="@+id/isfc_geterpissueorderlist_dll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                >
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

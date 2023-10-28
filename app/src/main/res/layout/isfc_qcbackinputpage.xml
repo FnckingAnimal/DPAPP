@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".IncludingSFC.qcbackinputpage">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:id="@+id/isfc_qcbackinputpage_headerrl1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#bec4bf"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/isfc_qcbackinputpage_headerll1"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:text="請輸入相關操作人員信息"
+                android:gravity="center_vertical"
+                android:id="@+id/isfc_qcbackinputpage_mainlabelheader"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="#ffffff"
+                ></TextView>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="提交"
+                android:id="@+id/isfc_qcbackinputpage_submitbt"
+                android:background="@drawable/btn_dl"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/isfc_qcbackinputpage_mainlabelheader"
+                android:layout_marginLeft="20dp"
+                android:onClick="qcbackinputpagesubmit"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Defect Group:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_dgtl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_headerll1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_dgsp1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_headerll1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_dgtl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="MFG Inspect shift::"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_mistl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_dgtl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_missp1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_dgtl1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_mistl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="MFG Operator:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_motl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_mistl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_moet1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_mistl1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_motl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="MFG Check:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_mc1tl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_motl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_mc1et1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_motl1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_mc1tl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="ENG Check:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_eg1tl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_mc1tl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_eg1et1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_mc1tl1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_eg1tl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="QC Check:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_qcbackinputpage_qc1tl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_eg1tl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_qcbackinputpage_qc1et1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_qcbackinputpage_eg1tl1"
+            android:layout_toEndOf="@+id/isfc_qcbackinputpage_eg1tl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

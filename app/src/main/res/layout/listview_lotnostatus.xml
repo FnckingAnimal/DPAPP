@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_xh"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:background="#abf6a8"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_lotno"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:background="#eae583"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_opno"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#b3ad9f"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_qty"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#abe9af"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:background="#cfb863"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_zhuangtai"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#c000ff00"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+</LinearLayout>

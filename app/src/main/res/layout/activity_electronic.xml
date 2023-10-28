@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="工廠:"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/sp_electronic_factory"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="倉碼:"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/sp_electronic_cang"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="料號:"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_electronic_materialno"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@color/azure"
+            android:gravity="center"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:hint="點擊掃描料號"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="庫存:"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_electronic_inventory"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:textColor="@color/blueviolet"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bt_electronic_search"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/btn_dl"
+            android:gravity="center"
+            android:text="異動查詢"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/mistyrose"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="料號"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="倉碼"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="SAP批次"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="供應商批次"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="當前庫存"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="未扣賬數量"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="異動日期"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_electronic2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/mistyrose"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="日期"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="出入庫單號"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="批號"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="入庫數量"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="出庫數量"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="結存庫存"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="倉管"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_electronic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

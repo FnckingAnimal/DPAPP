@@ -1,0 +1,5 @@
+<resource>
+    <external-path
+        name="external"
+        path="." />
+</resource>

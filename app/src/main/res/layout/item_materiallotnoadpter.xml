@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#abf6a8"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#e8efaf"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter3"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#b5be89"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter4"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#a5dc88"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter5"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#cfcbc1"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_item_materialwonoadpter6"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#c000ff00"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+</LinearLayout>

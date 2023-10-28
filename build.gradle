@@ -1,0 +1,13 @@
+buildscript {
+    ext {
+        buildToolsVersion = '30.0.3'
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3'
+    }
+}

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".IncludingSFC.testopnosnsumcheck">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:id="@+id/isfc_testopnosnsumcheck_headerrl1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="#bec4bf"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5067c6"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/isfc_testopnosnsumcheck_headerll1"
+            >
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:text=""
+                android:gravity="center_vertical"
+                android:id="@+id/isfc_testopnosnsumcheck_mainlabelheader"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:textColor="#ffffff"
+                ></TextView>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="提交"
+                android:id="@+id/isfc_testopnosnsumcheck_submitbt"
+                android:background="@drawable/btn_dl"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_mainlabelheader"
+                android:layout_marginLeft="20dp"
+                android:onClick="testopnosnsumchecksubmit"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_testopnosnsumcheck_lotnotl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_headerll1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="XXXXXXXX"
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_testopnosnsumcheck_errorinfotv1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_headerll1"
+            android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_lotnotl1"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_testopnosnsumcheck_opnotl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_headerll1"
+            android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_errorinfotv1"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="XXXXXXXX"
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_testopnosnsumcheck_testcarttv1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_headerll1"
+            android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_opnotl1"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="用戶名:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_testopnosnsumcheck_line1tl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_lotnotl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_testopnosnsumcheck_useret1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_lotnotl1"
+            android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_line1tl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="密碼:"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:id="@+id/isfc_testopnosnsumcheck_line2tl1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_line1tl1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            />
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:gravity="center_vertical"
+            android:id="@+id/isfc_testopnosnsumcheck_pwdet1"
+            android:textSize="16dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/isfc_testopnosnsumcheck_line1tl1"
+            android:layout_toEndOf="@+id/isfc_testopnosnsumcheck_line2tl1"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:background="#ffffff"
+            />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
