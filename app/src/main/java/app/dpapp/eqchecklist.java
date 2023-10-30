@@ -72,7 +72,7 @@ import app.dpapp.utils.ImageUtils;
  */
 public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, FreedomSOAPCallBack {
 
-    //统一定义登入用户名，其它为系统内机台代码，机台名称，及机种码
+    // 统一定义登入用户名，其它为系统内机台代码，机台名称，及机种码
     protected String Sessionuser;
     protected String Site;
     protected String Eqid;
@@ -91,16 +91,16 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
     protected TextView eqfileversiontv1;
     protected TextView eqcheckdheadertv1, mTv_deviceno;
     private String sysErrorcode; // 1:获取资料异常
-    protected int clicktimes;  //  提交次数  提交失败递增，提交成功就初始化为0
+    protected int submitBtnClickTimes;  //  提交次数  提交失败递增，提交成功就初始化为0
 
     private View scontextview;
     private String mFilePath = "/storage/emulated/0/CMSF/Tempfile/machinecheck/";
     public static final String PATHNEW = "/MyImage/";
-    //定义数据源
-    //protected List<Slist> Sourcelist;
+    // 定义数据源
+    // protected List<Slist> Sourcelist;
     private ListView mListView;
-    private final int FROM_ALBUM = 1;//表示从相册获取照片
-    private final int FROM_CAMERA = 2;//表示从相机获取照片
+    private final int FROM_ALBUM = 1;// 表示从相册获取照片
+    private final int FROM_CAMERA = 2;// 表示从相机获取照片
     private String mItem, mDefectName = "4.系統異常";
     private String returnstr;
     private String path = Environment.getExternalStorageDirectory() + PATHNEW;
@@ -111,27 +111,6 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-
-    class formdata {
-        private String header;
-        private List<Slist> detaillist;
-
-        public String getHeader() {
-            return header;
-        }
-
-        public void setHeader(String v) {
-            header = v;
-        }
-
-        public List<Slist> getDetaillist() {
-            return detaillist;
-        }
-
-        public void setDetaillist(List<Slist> v) {
-            detaillist = v;
-        }
-    }
 
     class Slist {
         private String Sessionuser;
@@ -255,15 +234,15 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
     }
 
 
-    private Button bt1, bt2, bt3, bt4, bt5;
-    private LinearLayout lly1;
+    private Button submitBtn, bt2, shelfBtn, offlineBtn, clearCacheBtn;
+    private LinearLayout eqchecklistLinearLayout;
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eq_checklist);
         try {
-            StrictMode.VmPolicy.Builder builder =new StrictMode.VmPolicy.Builder();
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
             StrictMode.setVmPolicy(builder.build());
             builder.detectFileUriExposure();
 
@@ -290,31 +269,28 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
             eqfileversiontv1 = (TextView) findViewById(R.id.eq_checklistmemotv1);
             eqcheckdheadertv1 = (TextView) findViewById(R.id.eq_checklisttv1);
 
-            //eqopnametv1.setText(Eqopname);HP 要求顯示具體的機台號而不是機台類型
+            // eqopnametv1.setText(Eqopname);HP 要求顯示具體的機台號而不是機台類型
             eqopnametv1.setText(Eqname);
             eqlinanemtv1.setText(Eqlinename);
             eqfileversiontv1.setText(Filerevsion);
             mTv_deviceno.setText(bundle.getString("device"));
 
-            bt1 = (Button) findViewById(R.id.eq_checklistbutton1);
-            bt2 = (Button) findViewById(R.id.eq_checklistrejectbt3);
-            bt3 = (Button) findViewById(R.id.eq_checklistbutton2);
-            bt4 = (Button) findViewById(R.id.eq_checklistbutton4);
-            bt5 = (Button) findViewById(R.id.eq_checklistbutton3);
+            submitBtn = (Button) findViewById(R.id.eq_checklistbutton1);
+            shelfBtn = (Button) findViewById(R.id.eq_checklistbutton2);
+            offlineBtn = (Button) findViewById(R.id.eq_checklistbutton4);
+            clearCacheBtn = (Button) findViewById(R.id.eq_checklistbutton3);
             if ("MP".equals(flag)) {
-                bt1.setVisibility(View.GONE);
-                bt2.setVisibility(View.GONE);
-                bt3.setVisibility(View.GONE);
-                bt4.setVisibility(View.GONE);
-                bt5.setVisibility(View.GONE);
+                submitBtn.setVisibility(View.GONE);
+                shelfBtn.setVisibility(View.GONE);
+                offlineBtn.setVisibility(View.GONE);
+                clearCacheBtn.setVisibility(View.GONE);
                 eqopnametv1.setVisibility(View.GONE);
                 eqlinanemtv1.setVisibility(View.GONE);
                 eqfileversiontv1.setVisibility(View.GONE);
                 eqcheckdheadertv1.setVisibility(View.GONE);
-
             }
 
-            lly1 = (LinearLayout) findViewById(R.id.eqchecklistLinearLayout1);
+            eqchecklistLinearLayout = (LinearLayout) findViewById(R.id.eqchecklistLinearLayout1);
             execloadactivity.opendialog(this, "正在執行");
             MyThreadPool.pool.execute(
                     new Runnable() {
@@ -396,15 +372,15 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 
 
             switch ((int) parmerobject) {
-                //Save Tempfile
+                // Save Tempfile
                 case 0:
                     Toast.makeText(this, ((BaseFuncation.rrtype) o).get_rmsg(), Toast.LENGTH_SHORT).show();
                     break;
-                //Load Tempfileto UI
+                // Load Tempfileto UI
                 case 1:
                     loadtempdatatoui(o);
                     break;
-                //Clear all cache file
+                // Clear all cache file
                 case 2:
                     Toast.makeText(this, ((BaseFuncation.rrtype) o).get_rmsg(), Toast.LENGTH_SHORT).show();
                     break;
@@ -444,9 +420,9 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                     tempb = "";
                 }
 
-                for (int i = 0; i < lly1.getChildCount() - 1; i++) {
-                    if (((TextView) lly1.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString().equals(tempa)) {
-                        ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setText(tempb);
+                for (int i = 0; i < eqchecklistLinearLayout.getChildCount() - 1; i++) {
+                    if (((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString().equals(tempa)) {
+                        ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setText(tempb);
                     }
                 }
 
@@ -465,7 +441,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
     public void loadtempdata() {
         try {
             BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
-            r = app.dpapp.appcdl.Exectempfile.instance().getfileTwo(Eqid, this, 1);//getfile_string(Checkdataid, this, 1);            //
+            r = Exectempfile.instance().getfileTwo(Eqid, this, 1);// getfile_string(Checkdataid, this, 1);            //
             Toast.makeText(this, r.get_rmsg(), Toast.LENGTH_SHORT).show();
         } catch (Exception ex) {
             throw ex;
@@ -563,9 +539,9 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                         BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
                         try {
                             List<String> ls = new ArrayList<>();
-                            if (lly1 != null) {
-                                for (int i = 0; i < lly1.getChildCount() - 1; i++) {
-                                    View recordView = lly1.getChildAt(i);
+                            if (eqchecklistLinearLayout != null) {
+                                for (int i = 0; i < eqchecklistLinearLayout.getChildCount() - 1; i++) {
+                                    View recordView = eqchecklistLinearLayout.getChildAt(i);
                                     String Mitem1 = ((TextView) recordView.findViewById(R.id.Mitem1)).getText().toString().replace("\r\n", "").replace("\n", "");
 
                                     ls.add("["
@@ -591,7 +567,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                             }
                             if (ls.size() > 0) {
 //                                r = Exectempfile.instance().savefile(Checkdataid, ls);
-                                r = app.dpapp.appcdl.Exectempfile.instance().savefileTwo(Eqid, ls);
+                                r = Exectempfile.instance().savefileTwo(Eqid, ls);
                                 msg.what = 0;
                                 msg.obj = r;
                                 // Log.d("debug0", JSON.toJSONString(r));
@@ -626,20 +602,20 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                         BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
                         try {
                             List<String> ls = new ArrayList<>();
-                            if (lly1 != null) {
+                            if (eqchecklistLinearLayout != null) {
 
-                                for (int i = 0; i < lly1.getChildCount() - 1; i++) {
-                                    String Mitem1 = ((TextView) lly1.getChildAt(i).findViewById(R.id.Mitem1)).getText().toString().replace("\r\n", "");
+                                for (int i = 0; i < eqchecklistLinearLayout.getChildCount() - 1; i++) {
+                                    String Mitem1 = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mitem1)).getText().toString().replace("\r\n", "");
                                     Mitem1 = Mitem1.replace("\n", "");
                                     ls.add(
 
-                                            "[" + ((TextView) lly1.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString() + "],["
-                                                    + ((TextView) lly1.getChildAt(i).findViewById(R.id.Mdept1)).getText().toString() + "],["
+                                            "[" + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString() + "],["
+                                                    + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mdept1)).getText().toString() + "],["
                                                     + Mitem1 + "],["
-                                                    + ((TextView) lly1.getChildAt(i).findViewById(R.id.Munit)).getText().toString() + "],["
-                                                    + ((TextView) lly1.getChildAt(i).findViewById(R.id.Mspec1)).getText().toString() + "],["
-                                                    + ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).getText().toString() + "],["
-                                                    + ((TextView) lly1.getChildAt(i).findViewById(R.id.MValuespec)).getText() + "]"
+                                                    + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Munit)).getText().toString() + "],["
+                                                    + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mspec1)).getText().toString() + "],["
+                                                    + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).getText().toString() + "],["
+                                                    + ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.MValuespec)).getText() + "]"
                                     );
                                 }
                                 ls.add(
@@ -653,7 +629,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 
                             }
                             if (ls != null && ls.size() > 0) {
-                                r = app.dpapp.appcdl.Exectempfile.instance().savefile222(Eqid + "_" + Filerevsion, ls);
+                                r = Exectempfile.instance().saveFileEqChecklist(Eqid + "_" + Filerevsion, ls);
                             }
 
                             msg.what = 0;
@@ -685,8 +661,8 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                 BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
                 Message m = new Message();
                 try {
-                    app.dpapp.appcdl.Exectempfile.instance().deleteDirectory(mFilePath);
-                    r = app.dpapp.appcdl.Exectempfile.instance().clearcachefile();
+                    Exectempfile.instance().deleteDirectory(mFilePath);
+                    r = Exectempfile.instance().clearcachefile();
                     m.what = 0;
                     m.obj = r;
                 } catch (Exception e) {
@@ -704,207 +680,214 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
     public void eqchecklistbt1onclick(View v) {
 
         try {
-            if (lly1 != null) {
-                String temp1 = null;
-                String temp2 = null;
-                String temp3 = null;
-                String temp4 = null;
-                String temp5 = null;
+            if (eqchecklistLinearLayout != null) {
+                String spec = null;
+                String value = null;
+                String item = null;
+                String idx = null;
+                String checkValue = null;
                 TextView textViewImageSpan;
-                ArrayList<String> list = new ArrayList<>();
+                Set<String> idSet = new HashSet<>();
 
-                String[] strArray = null;
+                String[] specArray = null;
                 Boolean checkdatastatus = true;
                 Boolean checksendMail = false;
                 String str_mail = Deviceno + ":" + Eqname + ":" + Filerevsion + ":" + Checkdataid + ":" + Sessionuser + "";
 
-                //String rstr=Checkdataid+":"+Sessionuser+":"+lly1.getChildCount()+":";
+                // String rstr=Checkdataid+":"+Sessionuser+":"+lly1.getChildCount()+":";
                 String rstr = "";
                 int rcount = 0;
-                clicktimes++;
+                submitBtnClickTimes++;
 
-                for (int i = 0; i < lly1.getChildCount() - 1; i++) {
-                    //if(((EditText) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).getVisibility()==View.VISIBLE) {
-                    if (((EditText) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).isEnabled() == true) {
-                        temp1 = ((TextView) lly1.getChildAt(i).findViewById(R.id.Mspec1)).getText().toString();
-                        temp2 = ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).getText().toString();
-                        temp3 = ((TextView) lly1.getChildAt(i).findViewById(R.id.Mitem1)).getText().toString();
-                        temp4 = ((TextView) lly1.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString();
-                        temp5 = ((TextView) lly1.getChildAt(i).findViewById(R.id.checkvalues)).getText().toString();
-                        temp2 = temp2.toUpperCase();
-                        strArray = temp1.split(";");
-                        rstr = rstr + "{" + temp4 + ";" + temp2 + "}";
+                for (int i = 0; i < eqchecklistLinearLayout.getChildCount() - 1; i++) {
+                    if (((EditText) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).isEnabled() == true) {
+                        spec = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mspec1)).getText().toString();
+                        value = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).getText().toString();
+                        item = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mitem1)).getText().toString();
+                        idx = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mitemid1)).getText().toString();
+                        checkValue = ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.checkvalues)).getText().toString();
+                        value = value.toUpperCase();
+                        specArray = spec.split(";");
+                        rstr = rstr + "{" + idx + ";" + value + "}";
                         rcount++;
 
-                        if (temp2 == null || temp2.length() <= 0) {
+                        if (value == null || value.length() <= 0) {
                             checkdatastatus = false;
                         }
-                        if (temp3.contains("OP ID") || temp3.contains("ME ID") || temp3.contains("QC ID") || temp3.contains("ME Check")) {
-                            list.add(temp2);
+                        if (item.contains("OP ID") || item.contains("ME ID") || item.contains("QC ID") || item.contains("ME Check")) {
+                            if (idSet.contains(value)) {
+                                Toast.makeText(eqchecklist.this, "OP ID，ME ID，QC ID，ME Check人不能相同!", Toast.LENGTH_LONG).show();
+                                return;
+                            }
+                            if (value.length() < 8) {
+                                Toast.makeText(eqchecklist.this, "请输入正确格式的工号!", Toast.LENGTH_LONG).show();
+                                return;
+                            }
+                            idSet.add(value);
                         }
-                        switch (strArray[0]) {
+                        switch (specArray[0]) {
                             case "1":
-                                //by lyh
-                                if (strArray[1].equals(">") || strArray[1].equals("<") || strArray[1].equals(">=") || strArray[1].equals("<=")
-                                        || strArray[1].equals("≥") || strArray[1].equals("≤")) {
-                                    if (strArray[1].equals(">")) {
-                                        if (Float.parseFloat(temp2) > Float.parseFloat(strArray[2])) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                // by lyh
+                                if (specArray[1].equals(">") || specArray[1].equals("<") || specArray[1].equals(">=") || specArray[1].equals("<=")
+                                        || specArray[1].equals("≥") || specArray[1].equals("≤")) {
+                                    if (specArray[1].equals(">")) {
+                                        if (Float.parseFloat(value) > Float.parseFloat(specArray[2])) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
-                                            if (clicktimes < 2) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
                                         }
                                     }
 
-                                    if (strArray[1].equals("<")) {
+                                    if (specArray[1].equals("<")) {
 
-                                        if (Float.parseFloat(temp2) < Float.parseFloat(strArray[2])) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                            if (clicktimes < 2) {
+                                        if (Float.parseFloat(value) < Float.parseFloat(specArray[2])) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
 
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                         }
                                     }
-                                    if (strArray[1].equals("<=") || strArray[1].equals("≤")) {
+                                    if (specArray[1].equals("<=") || specArray[1].equals("≤")) {
 
-                                        if (Float.parseFloat(temp2) <= Float.parseFloat(strArray[2])) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                            if (clicktimes < 2) {
+                                        if (Float.parseFloat(value) <= Float.parseFloat(specArray[2])) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
 
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                         }
                                     }
-                                    if (strArray[1].equals(">=") || strArray[1].equals("≥")) {
-                                        if (Float.parseFloat(temp2) >= Float.parseFloat(strArray[2])) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                            if (clicktimes < 2) {
+                                    if (specArray[1].equals(">=") || specArray[1].equals("≥")) {
+                                        if (Float.parseFloat(value) >= Float.parseFloat(specArray[2])) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
 
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                         }
                                     }
                                 } else {
                                     try {
-                                        if (Float.parseFloat(strArray[1]) > Float.parseFloat(temp2) || Float.parseFloat(strArray[2]) < Float.parseFloat(temp2)) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
-                                            if (clicktimes < 2) {
+                                        if (Float.parseFloat(specArray[1]) > Float.parseFloat(value) || Float.parseFloat(specArray[2]) < Float.parseFloat(value)) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
 
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                         }
                                     } catch (Exception e) {
-                                        ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                        ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                     }
                                 }
 
                                 break;
 
                             case "0":
-                                if ("Y".equals(temp2) || "N".equals(temp2) || "y".equals(temp2) || "n".equals(temp2)) {
-                                    ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                if ("Y".equals(value) || "N".equals(value) || "y".equals(value) || "n".equals(value)) {
+                                    ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                 } else {
-                                    ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
-                                    if (clicktimes < 2) {
+                                    ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                    if (submitBtnClickTimes < 2) {
                                         checkdatastatus = false;
                                     }
                                 }
                                 break;
                             case "2":
                             case "3":
-                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                 break;
                             case "4":
-                                if (!TextUtils.isEmpty(temp5)) {
-                                    if (temp5.toUpperCase().equals(temp2)) {
-                                        ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                if (!TextUtils.isEmpty(checkValue)) {
+                                    if (checkValue.toUpperCase().equals(value)) {
+                                        ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                     } else {
-                                        ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
-                                        if (clicktimes < 2) {
+                                        ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                        if (submitBtnClickTimes < 2) {
                                             checkdatastatus = false;
                                         }
                                     }
                                 } else {
-                                    ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                    ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                 }
-                                //lyh
-                                if (temp2.equals("N")) {
+                                // lyh
+                                if (value.equals("N")) {
                                     checksendMail = true;
-                                    str_mail += "序号为" + temp4 + "的点检项目选择为N,请确认\r\n";
+                                    str_mail += "序号为" + idx + "的点检项目选择为N,请确认\r\n";
                                 }
                                 break;
-                            case "5"://允許值為空，如果不為空，那麼檢測是否有上下限
-                                if (strArray.length == 1 || temp2.trim().equals("/")) {
-                                    ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                            case "5":// 允許值為空，如果不為空，那麼檢測是否有上下限
+                                if (specArray.length == 1 || value.trim().equals("/")) {
+                                    ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                 } else {
-                                    if (strArray[1].equals(">") || strArray[1].equals("<") || strArray[1].equals(">=") || strArray[1].equals("<=")
-                                            || strArray[1].equals("≥") || strArray[1].equals("≤")) {
-                                        if (strArray[1].equals(">")) {
-                                            if (Float.parseFloat(temp2) > Float.parseFloat(strArray[2]) ) {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                                if (clicktimes < 2) {
+                                    if (specArray[1].equals(">") || specArray[1].equals("<") || specArray[1].equals(">=") || specArray[1].equals("<=")
+                                            || specArray[1].equals("≥") || specArray[1].equals("≤")) {
+                                        if (specArray[1].equals(">")) {
+                                            if (Float.parseFloat(value) > Float.parseFloat(specArray[2])) {
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                                if (submitBtnClickTimes < 2) {
                                                     checkdatastatus = false;
                                                 }
 
                                             } else {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                             }
                                         }
-                                        if (strArray[1].equals(">=") || strArray[1].equals("≥")) {
-                                            if (Float.parseFloat(temp2) >= Float.parseFloat(strArray[2])) {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                                if (clicktimes < 2) {
+                                        if (specArray[1].equals(">=") || specArray[1].equals("≥")) {
+                                            if (Float.parseFloat(value) >= Float.parseFloat(specArray[2])) {
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                                if (submitBtnClickTimes < 2) {
                                                     checkdatastatus = false;
                                                 }
 
                                             } else {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                             }
                                         }
-                                        if (strArray[1].equals("<")) {
+                                        if (specArray[1].equals("<")) {
 
-                                            if (Float.parseFloat(temp2) < Float.parseFloat(strArray[2]) ) {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                                if (clicktimes < 2) {
+                                            if (Float.parseFloat(value) < Float.parseFloat(specArray[2])) {
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                                if (submitBtnClickTimes < 2) {
                                                     checkdatastatus = false;
                                                 }
 
                                             } else {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                             }
                                         }
-                                        if (strArray[1].equals("<=") || strArray[1].equals("≤")) {
+                                        if (specArray[1].equals("<=") || specArray[1].equals("≤")) {
 
-                                            if (Float.parseFloat(temp2) <= Float.parseFloat(strArray[2]) ) {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
-                                                if (clicktimes < 2) {
+                                            if (Float.parseFloat(value) <= Float.parseFloat(specArray[2])) {
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                                if (submitBtnClickTimes < 2) {
                                                     checkdatastatus = false;
                                                 }
 
                                             } else {
-                                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                             }
                                         }
                                     } else {
-                                        if (Float.parseFloat(strArray[1]) > Float.parseFloat(temp2) || Float.parseFloat(strArray[2]) < Float.parseFloat(temp2)) {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
-                                            if (clicktimes < 2) {
+                                        if (Float.parseFloat(specArray[1]) > Float.parseFloat(value) || Float.parseFloat(specArray[2]) < Float.parseFloat(value)) {
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                            if (submitBtnClickTimes < 2) {
                                                 checkdatastatus = false;
                                             }
 
                                         } else {
-                                            ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
+                                            ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.BLACK);
                                         }
 
                                     }
@@ -912,7 +895,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                                 }
 
                                 break;
-                            case "6img"://上传图片
+                            case "6img":// 上传图片
                                 checkdatastatus = true;
                               /*  //((ImageSpan) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setImageResource(R.drawable.btn_dl);
 
@@ -950,28 +933,12 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 
 
                             default:
-                                ((TextView) lly1.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
+                                ((TextView) eqchecklistLinearLayout.getChildAt(i).findViewById(R.id.Mvalue1)).setTextColor(Color.RED);
                                 checkdatastatus = false;
                                 break;
                         }
                     } else {
 
-                    }
-                }
-
-                for (int i = 0; i < list.size(); i++) {
-                    if(list.get(i).length() < 8) {
-                        Toast.makeText(eqchecklist.this, "请输入正确格式的工号!", Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                }
-
-                if(list.size() > 1) {
-                    Set<String> set = new HashSet<>(list);
-                    long count = set.size();
-                    if(count < list.size()) {
-                        Toast.makeText(eqchecklist.this, "OP ID，ME ID，QC ID，ME Check人不能相同!", Toast.LENGTH_LONG).show();
-                        return;
                     }
                 }
                 //              S20180102080170:S7151329:14:{0;20180103 10:12:22}{1;D}{2;V}{3;V}{4;V}{5;V}{6;V}{7;V}{8;V}{9;OK}{10;V}{11;V}{12;F1678260}{13;F1678260}
@@ -990,7 +957,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                             handle1.sendMessage(msg);
                         }
                     });
-                    clicktimes = 0;
+                    submitBtnClickTimes = 0;
 
                     if (Staticdata.email.equals("1")) {
                         final String str_mail1 = str_mail;
@@ -1087,11 +1054,11 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 
             SoapObject r1 = (SoapObject) envelope.bodyIn;
 
-            //SoapObject soapchild=(SoapObject)r1.getProperty(0);
+            // SoapObject soapchild=(SoapObject)r1.getProperty(0);
 
-            //SoapObject soapchild=(SoapObject)((SoapObject)((SoapObject)r1.getProperty(0)).getProperty(1)).getProperty(0);
+            // SoapObject soapchild=(SoapObject)((SoapObject)((SoapObject)r1.getProperty(0)).getProperty(1)).getProperty(0);
             // 获取返回的结果
-            //soapresult1 = r1.getProperty(0).toString();
+            // soapresult1 = r1.getProperty(0).toString();
 
             SOAPRETURNSTR = r1.getProperty(0).toString();
             return SOAPRETURNSTR;
@@ -1131,8 +1098,8 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                                         BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
                                         Message m = new Message();
                                         try {
-                                            app.dpapp.appcdl.Exectempfile.instance().deleteDirectory(mFilePath);
-                                            r = app.dpapp.appcdl.Exectempfile.instance().clearcachefile();
+                                            Exectempfile.instance().deleteDirectory(mFilePath);
+                                            r = Exectempfile.instance().clearcachefile();
                                             m.what = 0;
                                             m.obj = r;
                                         } catch (Exception e) {
@@ -1147,7 +1114,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                             } else {
                                 Toast.makeText(eqchecklist.this, "提交成功,但清除暫存資料失敗", Toast.LENGTH_LONG).show();
                             }
-                            //Exectempfile.instance().removefile(Checkdataid);
+                            // Exectempfile.instance().removefile(Checkdataid);
                             finish();
                             break;
                         case "1":
@@ -1181,9 +1148,9 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 
             try {
                 SoapObject rpc = new SoapObject(NAMESPACE, METHOD_NAME);
-                //rpc.addProperty("machinesysid", scanstr1);
+                // rpc.addProperty("machinesysid", scanstr1);
                 rpc.addProperty("machinesysid", Eqid);
-                //rpc.addProperty("checktype", "0");    //0:点检表单
+                // rpc.addProperty("checktype", "0");    //0:点检表单
                 rpc.addProperty("userid", Sessionuser);
                 rpc.addProperty("flowid", Checkdataid);
 
@@ -1213,7 +1180,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                     return null;
                 }
                 // 获取返回的结果
-                //soapresult1 = r1.getProperty(0).toString();
+                // soapresult1 = r1.getProperty(0).toString();
                 String tempsoap1;
                 String tempsoap2;
                 String tempsoap3;
@@ -1495,7 +1462,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
 //                                ((ImageView) convertView.findViewById(R.id.imageView)).setVisibility(View.VISIBLE);
 //                                joinCameraPhoto(((ImageView) convertView.findViewById(R.id.imageView)), ((TextView) convertView.findViewById(R.id.Mitemid1)).getText().toString());
                                 joinCameraPhoto(((EditText) convertView.findViewById(R.id.Mvalue1)), ((TextView) convertView.findViewById(R.id.Mitemid1)).getText().toString());
-                            } else if (tempspecvalue1.equals("4")){
+                            } else if (tempspecvalue1.equals("4")) {
                                 // 1:數字 2:任意文字 3:日期 4:ChooseItem{Y/N,Ass/Rej,S/N}
 //                                hideSoftKeyBoard((EditText) convertView.findViewById(R.id.Mvalue1));
                                 ((EditText) convertView.findViewById(R.id.Mvalue1)).setFocusable(false);
@@ -1523,13 +1490,13 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                         }
 
                         scontextview = convertView;
-                        lly1.addView(convertView);
+                        eqchecklistLinearLayout.addView(convertView);
                     }
                     if ("2".equals(Sourcelist.get(i).getTABLETYPE())) {
                         TextView textView = new TextView(eqchecklist.this);
                         textView.setText(Sourcelist.get(i).getItemname());
                         textView.setTextSize(18);
-                        lly1.addView(textView);
+                        eqchecklistLinearLayout.addView(textView);
                     }
                 }
             }
@@ -1662,7 +1629,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
         httprequestinputdata hhi1 = new httprequestinputdata();
         hhi1.setDataname("systemname");
         hhi1.setDatavalue(systemname);
-        //hhi1.setDatavalue("CMSFMGRBCEQCHECK");
+        // hhi1.setDatavalue("CMSFMGRBCEQCHECK");
         li.add(hhi1);
         httprequestinputdata hhi2 = new httprequestinputdata();
         hhi2.setDataname("createid");
@@ -1678,7 +1645,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
             @Override
             public void processData(Object paramObject, boolean paramBoolean) {
                 returnstr = paramObject.toString();
-                if(returnstr.contains("ERROR")) {
+                if (returnstr.contains("ERROR")) {
                     makeText(eqchecklist.this, "上传失败，需要重新上传!", Toast.LENGTH_SHORT).show();
                 } else {
                     ((EditText) scontextview.findViewById(R.id.Mvalue1)).setText(returnstr.split(":")[1]);
@@ -1817,7 +1784,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
     protected void selectitems(final View v, final String cs) {
         try {
             if (cs.equals("upload")) {
-                //v.setEnabled(false);
+                // v.setEnabled(false);
                 ((EditText) v).setInputType(InputType.TYPE_NULL);
                 //((EditText)v).setEnabled(true);
                 v.setOnClickListener(
@@ -1829,7 +1796,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
                                 builder.setPositiveButton("拍照", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                //調用相機拍照  邏輯在此實現
+                                                // 調用相機拍照  邏輯在此實現
 
                                                 Intent intent = new Intent(eqchecklist.this, uploadimage.class);
                                                 Bundle bundle = new Bundle();
@@ -1854,7 +1821,7 @@ public class eqchecklist extends AppCompatActivity implements Iobjectrhandler, F
         }
     }
 
-    public void joinCameraPhoto(final View v1,final String item) {
+    public void joinCameraPhoto(final View v1, final String item) {
         v1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

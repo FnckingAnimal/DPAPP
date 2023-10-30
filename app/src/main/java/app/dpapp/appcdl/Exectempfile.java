@@ -85,7 +85,7 @@ public class Exectempfile {
         }
     }
 
-    public BaseFuncation.rrtype savefile222(String filename, List<String> value) {
+    public BaseFuncation.rrtype saveFileEqChecklist(String filename, List<String> value) {
 
         BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
         if (filename == null || filename.trim().equals("")) {
@@ -505,25 +505,6 @@ public class Exectempfile {
                 ) {
                     s.delete();
                 }
-            }
-            r.set_rstatus(true);
-            r.set_rmsg("Success");
-            return r;
-        } catch (Exception ex) {
-            r.set_rstatus(false);
-            r.set_rmsg(ex.getMessage());
-            return r;
-        }
-    }
-
-    public BaseFuncation.rrtype clearcachefilenewTwo(String fileurl) {
-        BaseFuncation.rrtype r = new BaseFuncation().new rrtype();
-        try {
-            String filePATH = "/storage/emulated/0/CMSF/Tempfile/machinecheck/";
-            filePATH = filePATH + fileurl;
-            File file = new File(filePATH);
-            if (file.exists()) {
-                file.delete();
             }
             r.set_rstatus(true);
             r.set_rmsg("Success");
